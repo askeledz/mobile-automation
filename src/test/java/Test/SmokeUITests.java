@@ -5,7 +5,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
- * Created by Andrej on Jun 2017.
+ * Created by Andrej Skeledzija on Jun 2017.
  */
 public class SmokeUITests extends BaseTestClass {
 
