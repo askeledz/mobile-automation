@@ -31,12 +31,12 @@ Macaca Inspector if you need:
 -----------------------
 https://bitbar.com/appium-1-6-3-tips-for-identifying-ids-elements-and-xpath-values/
 
-Make sure you build app in XCode on specific simulatro teh you should use this simulator and this app. !!!!!!
-
+Make sure you build app in XCode on specific simulator and that you use this simulator and this app. !!!!!!
 
 You can install it if you have a .app file already built locally
 1. Start simulator
 #alias simulator='open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app'
+Run simulator:
 #simulator
 2. Run ” xcrun simctl install 7C2900B5-1B0D-42FD-9B6E-98EF37576570 /Users/<user>/Documents/Private/development/app_ios/UICatalog.app
  e.g xcrun simctl install 7C2900B5-1B0D-42FD-9B6E-98EF37576570 /Users/<user>/Library/Developer/Xcode/DerivedData/UICatalog-gemsayjuidjhyvawjrhaqtavedzw/Build/Products/Debug-iphonesimulator/UICatalog.app
