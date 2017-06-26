@@ -48,8 +48,9 @@ Inspector start at:
 http://192.168.1.8:5678
 
 Run inspector:
-app-inspector -u 7C2900B5-1B0D-42FD-9B6E-98EF37576570
-app-inspector -u C4EF6D65-3027-400F-B3D4-ECEE778BA0BC --verbose
+#app-inspector -u 7C2900B5-1B0D-42FD-9B6E-98EF37576570
+#app-inspector -u C4EF6D65-3027-400F-B3D4-ECEE778BA0BC --verbose
+
 For real device:
 ---------
 It can be used to inspect real devices same steps above apply only instead of using the simulator you would grab the UUID of the real device. This can be done with the following: run instruments -s devices in Terminal
