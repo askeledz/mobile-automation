@@ -9,16 +9,16 @@ install an set PATH.
 
 AVD
 -------------
-Create AVD with Android Strudio.
-Then you can check
-#emulator -list-avds
-(e.g. Andrej_AVD_Nexus_5X_API_24)
-Go to Emulator folder:
-#cd ~/Library/Android/sdk/tools
-Start AVD:
-#emulator -avd Andrej_AVD_Nexus_5X_API_24
+- Create AVD with Android Strudio.
+- Then you can check
+  - #emulator -list-avds
+    - (e.g. Andrej_AVD_Nexus_5X_API_24)
+- Go to Emulator folder:
+  - #cd ~/Library/Android/sdk/tools
+- Start AVD:
+  - #emulator -avd Andrej_AVD_Nexus_5X_API_24
 
-Start Appium and you are ready for ANDROID test.
+- Start Appium and you are ready for ANDROID test.
 
 Appium-iOS-Inspector:
 *******************************
