@@ -5,11 +5,17 @@ Instructions:
 
 Android SDK
 --------------------
-install an set PATH.
+install and set PATH.
+
+Android Studio
+--------------------
+install and create AVD.
+
 
 AVD
 -------------
 - Create AVD with Android Strudio.
+   - https://developer.android.com/studio/run/managing-avds.html
 - Then you can check
   - #emulator -list-avds
     - (e.g. Andrej_AVD_Nexus_5X_API_24)
@@ -18,7 +24,7 @@ AVD
 - Start AVD:
   - #emulator -avd Andrej_AVD_Nexus_5X_API_24
 
-- Start Appium and you are ready for ANDROID test.
+- Start Appium and you are ready for ANDROID test. MAke sure you set DesiredCapabilities according to you AVD. 
 
 Appium-iOS-Inspector:
 *******************************
