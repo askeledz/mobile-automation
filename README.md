@@ -81,3 +81,38 @@ xcrun simctl erase all
 
 echo "Killing com.apple.CoreSimulator.CoreSimulatorService"
 killall -9 com.apple.CoreSimulator.CoreSimulatorService
+
+# Reports
+- /target/surefire-reports/index.html
+
+# Jenkins Setup
+- Install Jenkins:
+  - $brew install jenkins
+- Run Jenkins
+  - $jenkins
+
+NOTE: For very first start Jenkins needs to be activated. Copy password from console (should be on the screen) and activate Jenkins on Browser (localhost:8080) and continue installation from browser.
+
+- Before start we need to setup Maven:
+  - Manage Jenkins --> Global Tool Configuration and setup Maven as following:
+    - Name: mavenname
+    - Install Automatically = true
+    - Install from Apache (Version 3.5.2)
+    
+- New job (item):
+    - Name: projectname
+    - Freestyle project
+    - Config: 
+      - Source Code Management: 
+        - Git (e.g. projecturl.git ) and credentials
+      - Build: 
+        - Maven version: (e.g. mavenname)
+        - Goals: clean test -am -DtestSuite=testnglocal.xml
+        - Advanced: POM: pom.xml
+
+# Set up Test Results Analyzer Plugin for Jenkins
+- Manage Jenkins --> Manage Plugins (e.g search for "Test Results Analyzer Plugin")
+- Install plugin and restart Jenkins.
+- At Jenkins dashboard, select <your project> / Configure
+- Under Post-build Actions tab, select Add post-build action and choose Publish JUnit test result report
+- At Test report XMLs, enter the path to your .xml report file, the analyzer will find data here to create charts, in my    case, it's target/surefire-reports/*.xml, you can edit the path to handle more tests.
