@@ -3,28 +3,30 @@ An Appium (java) example project for cross platform testing of an Android and an
 
 Instructions:
 
-Android SDK
+Android Studio (SDK)
 --------------------
 install and set PATH.
+https://developer.android.com/index.html
+Setup SDK manager.
 
-Android Studio
---------------------
-install and create AVD.
-
-
-AVD
+Create AVD (AVD Manager)
 -------------
 - Create AVD with Android Strudio.
    - https://developer.android.com/studio/run/managing-avds.html
 - Then you can check
   - #emulator -list-avds
-    - (e.g. Andrej_AVD_Nexus_5X_API_24)
+    - (e.g. Nexus 5X API 26 2018)
 - Go to Emulator folder:
   - #cd ~/Library/Android/sdk/tools
 - Start AVD:
-  - #emulator -avd Andrej_AVD_Nexus_5X_API_24
+  - #emulator -avd ANexus 5X API 26 2018
+  - You can start it from AVD Manager (play button)
 
-- Start Appium and you are ready for ANDROID test. MAke sure you set DesiredCapabilities according to you AVD. 
+Appium install
+--------------------
+http://appium.io/getting-started.html
+
+- Start Appium and you are ready for ANDROID test. Make sure you set DesiredCapabilities according to you AVD. 
 
 Appium-iOS-Inspector:
 *******************************
@@ -32,6 +34,10 @@ github location: https://github.com/mykola-mokhnach/Appium-iOS-Inspector
 
 Clone the project and open html page wich is inside. 
 Please be aware that simulator and Appium should be up and running before.
+
+Run XCode and start app with simulator
+---------------------------------------
+you are ready for iOS test.
 
 Macaca Inspector if you need:
 -----------------------
