@@ -3,13 +3,16 @@ An Appium (java) example project for cross platform testing of an Android and an
 
 Instructions:
 
-Android Studio (SDK)
+### Android Studio (SDK)
 --------------------
-- install and set PATH.
+- install Android studio.
 - https://developer.android.com/index.html
-- Setup SDK manager.
+- Set PATH:
+  - export ANDROID_HOME=/Users/<username>/Library/Android/sdk
+  - export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+  - export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin
 
-Create AVD (AVD Manager)
+### Create AVD (AVD Manager)
 -------------
 - Create AVD with Android Strudio.
    - https://developer.android.com/studio/run/managing-avds.html
@@ -22,13 +25,20 @@ Create AVD (AVD Manager)
   - #emulator -avd Andrej_Pixel_API_26
   - You can start it from AVD Manager (play button)
 
-Appium install
+### Appium install
 --------------------
 http://appium.io/getting-started.html
 
 - Start Appium and you are ready for ANDROID test. Make sure you set DesiredCapabilities according to you AVD. 
 
-Appium-iOS-Inspector:
+### How to get locators via UiAutomatorViewer
+----------------------------------------------
+
+- Once the android sdk path is set on the machine, open the terminal and type
+   - $uiautomatorviewer
+
+
+### Appium-iOS-Inspector:
 *******************************
 github location: https://github.com/mykola-mokhnach/Appium-iOS-Inspector
 
