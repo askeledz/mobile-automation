@@ -18,23 +18,24 @@ import java.util.concurrent.TimeUnit;
 public class AppiumController {
 
     public static OS executionOS = OS.IOS;
+    public static AppiumController instance = new AppiumController();
+    public AppiumDriver driver;
+
 
     public enum OS {
         ANDROID,
-        IOS
+        IOS,
     }
-    public static AppiumController instance = new AppiumController();
-    public AppiumDriver driver;
 
     public void start() throws MalformedURLException {
         if (driver != null) {
             return;
         }
-        switch(executionOS){
+        switch (executionOS) {
             case ANDROID:
                 File classpathRoot = new File(System.getProperty("user.dir"));
                 File appDir = new File(classpathRoot, "/app/Android");
-                File app = new File (appDir, "Contacts.apk");
+                File app = new File(appDir, "Contacts.apk");
                 DesiredCapabilities capabilities = new DesiredCapabilities();
                 capabilities.setCapability("platformName", "Android");
                 capabilities.setCapability("deviceName", "NotUsed");
@@ -48,7 +49,7 @@ public class AppiumController {
                 appDir = new File(classpathRoot, "/app/iOS/");
                 app = new File(appDir, "UICatalog.app");
                 capabilities = new DesiredCapabilities();
-                capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone 6");
+                capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone 6s");
                 capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "IOS");
                 capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11.2");
                 capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.IOS_XCUI_TEST);
@@ -65,4 +66,5 @@ public class AppiumController {
             driver = null;
         }
     }
+
 }
