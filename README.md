@@ -27,29 +27,29 @@ Instructions:
 
 ### Appium install
 --------------------
-http://appium.io/getting-started.html
-
+- Follow the instructions:
+  - http://appium.io/docs/en/about-appium/getting-started/?lang=en
 - Start Appium and you are ready for ANDROID test. Make sure you set DesiredCapabilities according to you AVD. 
 
-### How to get locators via UiAutomatorViewer
+### Android-Inspector: How to get locators via UiAutomatorViewer
 ----------------------------------------------
 
 - Once the android sdk path is set on the machine, open the terminal and type
    - $uiautomatorviewer
 
 
-### Appium-iOS-Inspector:
+### iOS-Inspector:
 *******************************
 github location: https://github.com/mykola-mokhnach/Appium-iOS-Inspector
 
 Clone the project and open html page wich is inside. 
 Please be aware that simulator and Appium should be up and running before.
 
-Run XCode and start app with simulator
+#### Run XCode and start app with simulator
 ---------------------------------------
 you are ready for iOS test.
 
-Macaca Inspector if you need:
+#### Macaca Inspector if you need:
 -----------------------
 https://bitbar.com/appium-1-6-3-tips-for-identifying-ids-elements-and-xpath-values/
 
@@ -73,12 +73,12 @@ Run inspector:
 #app-inspector -u 7C2900B5-1B0D-42FD-9B6E-98EF37576570
 #app-inspector -u C4EF6D65-3027-400F-B3D4-ECEE778BA0BC --verbose
 
-For real device:
+#### For real device:
 ---------
 It can be used to inspect real devices same steps above apply only instead of using the simulator you would grab the UUID of the real device. This can be done with the following: run instruments -s devices in Terminal
 
 
-CLEAR ALL SIMULATORS
+#### CLEAR ALL SIMULATORS
 ---------
 echo "Shutting down the simulator app"
 osascript -e 'quit app "Simulator"'
@@ -92,10 +92,10 @@ xcrun simctl erase all
 echo "Killing com.apple.CoreSimulator.CoreSimulatorService"
 killall -9 com.apple.CoreSimulator.CoreSimulatorService
 
-# Reports
+### Reports
 - /target/surefire-reports/index.html
 
-# Jenkins Setup
+### Jenkins Setup
 - Install Jenkins:
   - $brew install jenkins
 - Run Jenkins
@@ -120,7 +120,7 @@ NOTE: For very first start Jenkins needs to be activated. Copy password from con
         - Goals: clean test -am -DtestSuite=testnglocal.xml
         - Advanced: POM: pom.xml
 
-# Set up Test Results Analyzer Plugin for Jenkins
+### Set up Test Results Analyzer Plugin for Jenkins
 - Manage Jenkins --> Manage Plugins (e.g search for "Test Results Analyzer Plugin")
 - Install plugin and restart Jenkins.
 - At Jenkins dashboard, select <your project> / Configure
