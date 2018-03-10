@@ -1,9 +1,8 @@
 # cross-platform-mobile testing
 An Appium (java) example project for cross platform testing of an Android and an iOS application
 
-Instructions:
 
-### Android Studio (SDK)
+### Android Studio (SDK and AVD Manager)
 --------------------
 - install Android studio.
 - https://developer.android.com/index.html
@@ -11,11 +10,12 @@ Instructions:
   - export ANDROID_HOME=/Users/<username>/Library/Android/sdk
   - export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
   - export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin
-
-### Create AVD (AVD Manager)
+- To open the SDK Manager from Android Studio, click Tools > Android > SDK Manager.
+### Create AVD
 -------------
 - Create AVD with Android Strudio.
    - https://developer.android.com/studio/run/managing-avds.html
+- To open the AVD Manager from Android Studio, click Tools > Android > AVD Manager (Create Virtual device).
 - Then you can check
   - #emulator -list-avds
     - (e.g. Andrej_Pixel_API_26)
@@ -46,10 +46,12 @@ Instructions:
 *******************************
 github location: https://github.com/mykola-mokhnach/Appium-iOS-Inspector
 
-Clone the project and open html page wich is inside. 
+Clone the project and open html page which is inside. 
 Please be aware that simulator and Appium should be up and running before.
+HINT: Place the braekpoint where you want the execution to stop and run the test in debug mode. 
+      So you will be able to inspect the exact page you want.
 
-#### Run XCode and start app with simulator
+### Run XCode and start app with simulator
 ---------------------------------------
 you are ready for iOS test.
 
