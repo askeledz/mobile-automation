@@ -5,9 +5,9 @@ Instructions:
 
 Android Studio (SDK)
 --------------------
-install and set PATH.
-https://developer.android.com/index.html
-Setup SDK manager.
+- install and set PATH.
+- https://developer.android.com/index.html
+- Setup SDK manager.
 
 Create AVD (AVD Manager)
 -------------
