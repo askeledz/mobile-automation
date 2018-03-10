@@ -27,9 +27,13 @@ Instructions:
 
 ### Appium install
 --------------------
-- Follow the instructions:
-  - http://appium.io/docs/en/about-appium/getting-started/?lang=en
-- Start Appium and you are ready for ANDROID test. Make sure you set DesiredCapabilities according to you AVD. 
+- Install appium:
+  - #npm install -g appium
+- Check version:
+  - #appium -v
+- Run Appium:
+  - #appium
+- You are ready for iOS and ANDROID test. Make sure you set DesiredCapabilities according to you iOS dvice or AVD. 
 
 ### Android-Inspector: How to get locators via UiAutomatorViewer
 ----------------------------------------------
