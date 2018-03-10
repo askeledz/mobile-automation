@@ -1,45 +1,61 @@
 # cross-platform-mobile testing
 An Appium (java) example project for cross platform testing of an Android and an iOS application
 
-Instructions:
 
-Android Studio (SDK)
+### Android Studio (SDK and AVD Manager)
 --------------------
-- install and set PATH.
+- install Android studio.
 - https://developer.android.com/index.html
-- Setup SDK manager.
-
-Create AVD (AVD Manager)
+- Set PATH:
+  - export ANDROID_HOME=/Users/<username>/Library/Android/sdk
+  - export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+  - export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin
+- To open the SDK Manager from Android Studio, click Tools > Android > SDK Manager.
+### Create AVD
 -------------
 - Create AVD with Android Strudio.
    - https://developer.android.com/studio/run/managing-avds.html
+- To open the AVD Manager from Android Studio, click Tools > Android > AVD Manager (Create Virtual device).
 - Then you can check
   - #emulator -list-avds
-    - (e.g. Nexus 5X API 26 2018)
+    - (e.g. Andrej_Pixel_API_26)
 - Go to Emulator folder:
   - #cd ~/Library/Android/sdk/tools
 - Start AVD:
-  - #emulator -avd ANexus 5X API 26 2018
+  - #emulator -avd Andrej_Pixel_API_26
   - You can start it from AVD Manager (play button)
 
-Appium install
+### Appium install
 --------------------
-http://appium.io/getting-started.html
+- Install appium:
+  - #npm install -g appium
+- Check version:
+  - #appium -v
+- Run Appium:
+  - #appium
+- You are ready for iOS and ANDROID test. Make sure you set DesiredCapabilities according to you iOS dvice or AVD. 
 
-- Start Appium and you are ready for ANDROID test. Make sure you set DesiredCapabilities according to you AVD. 
+### Android-Inspector: How to get locators via UiAutomatorViewer
+----------------------------------------------
 
-Appium-iOS-Inspector:
+- Once the android sdk path is set on the machine, open the terminal and type
+   - $uiautomatorviewer
+
+
+### iOS-Inspector:
 *******************************
 github location: https://github.com/mykola-mokhnach/Appium-iOS-Inspector
 
-Clone the project and open html page wich is inside. 
+Clone the project and open html page which is inside. 
 Please be aware that simulator and Appium should be up and running before.
+HINT: Place the braekpoint where you want the execution to stop and run the test in debug mode. 
+      So you will be able to inspect the exact page you want.
 
-Run XCode and start app with simulator
+### Run XCode and start app with simulator
 ---------------------------------------
 you are ready for iOS test.
 
-Macaca Inspector if you need:
+#### Macaca Inspector if you need:
 -----------------------
 https://bitbar.com/appium-1-6-3-tips-for-identifying-ids-elements-and-xpath-values/
 
@@ -63,12 +79,12 @@ Run inspector:
 #app-inspector -u 7C2900B5-1B0D-42FD-9B6E-98EF37576570
 #app-inspector -u C4EF6D65-3027-400F-B3D4-ECEE778BA0BC --verbose
 
-For real device:
+#### For real device:
 ---------
 It can be used to inspect real devices same steps above apply only instead of using the simulator you would grab the UUID of the real device. This can be done with the following: run instruments -s devices in Terminal
 
 
-CLEAR ALL SIMULATORS
+#### CLEAR ALL SIMULATORS
 ---------
 echo "Shutting down the simulator app"
 osascript -e 'quit app "Simulator"'
@@ -82,10 +98,10 @@ xcrun simctl erase all
 echo "Killing com.apple.CoreSimulator.CoreSimulatorService"
 killall -9 com.apple.CoreSimulator.CoreSimulatorService
 
-# Reports
+### Reports
 - /target/surefire-reports/index.html
 
-# Jenkins Setup
+### Jenkins Setup
 - Install Jenkins:
   - $brew install jenkins
 - Run Jenkins
@@ -110,7 +126,7 @@ NOTE: For very first start Jenkins needs to be activated. Copy password from con
         - Goals: clean test -am -DtestSuite=testnglocal.xml
         - Advanced: POM: pom.xml
 
-# Set up Test Results Analyzer Plugin for Jenkins
+### Set up Test Results Analyzer Plugin for Jenkins
 - Manage Jenkins --> Manage Plugins (e.g search for "Test Results Analyzer Plugin")
 - Install plugin and restart Jenkins.
 - At Jenkins dashboard, select <your project> / Configure
