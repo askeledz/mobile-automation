@@ -15,11 +15,11 @@ Create AVD (AVD Manager)
    - https://developer.android.com/studio/run/managing-avds.html
 - Then you can check
   - #emulator -list-avds
-    - (e.g. Nexus 5X API 26 2018)
+    - (e.g. Andrej_Pixel_API_26)
 - Go to Emulator folder:
   - #cd ~/Library/Android/sdk/tools
 - Start AVD:
-  - #emulator -avd ANexus 5X API 26 2018
+  - #emulator -avd Andrej_Pixel_API_26
   - You can start it from AVD Manager (play button)
 
 Appium install
