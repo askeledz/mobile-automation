@@ -49,9 +49,9 @@ public class AppiumController {
                 appDir = new File(classpathRoot, "/app/iOS/");
                 app = new File(appDir, "UICatalog.app");
                 capabilities = new DesiredCapabilities();
-                capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone 6s");
+                capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone 6");
                 capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "IOS");
-                capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11.2");
+                capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11.3");
                 capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.IOS_XCUI_TEST);
                 capabilities.setCapability("app", app.getAbsolutePath());
                 driver = new IOSDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
