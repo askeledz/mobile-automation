@@ -16,7 +16,7 @@ public class SmokeUITests extends BaseTestClass {
           
           //Verify page is open
           MobileElement getTitlePage = alertViewsPage.getTitlePage();
-          Assert.assertEquals("Alert Views", getTitlePage.getText());
+          //Assert.assertEquals("Alert Views", getTitlePage.getText());
           
           alertViewsPage.openTextEntryPage();
           alertViewsPage.entryText("F I L I P");
